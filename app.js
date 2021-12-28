@@ -101,20 +101,7 @@ function updateHistory(url) {
        counter++;
        console.log("Page " + counter);
        console.log("Cursor: " + obj.cursor);
-
-       //Log the data
-    /*    mongo.connect(dburl, (error, database) => {
-          if (error) {
-            console.log("Failed to connect to database" + error);
-            return;
-          }
-          //Sometimes database may be null for some reason. In that case let's just try again.
-          if (database == undefined) {
-            console.log("Database is undefined. Handling this page again.");
-            counter--;
-            updateHistory(url);
-            return;
-          }*/
+       
           for (let i = 0; i < rows.length; i++) {
               base.collection(collection).insertOne(rows[i], (error, resposnse) => {
                 //The program will try insert games that are already logged. In that case just do nothing.
