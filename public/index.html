@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Rocks-Paper-Scissors</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="./livedata.js" type="module"></script>
+      <script src="./history.js" type="module"></script>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div id="wrapper">
+         <div id="ongoingGames" align="center" class="showbox">
+            <p class="title">Ongoing games</p>
+         </div>
+         <div align="center" class="showbox" id="playedGames">
+            <p class="title">Search player</p>
+            <input type="text" id="firstname">
+            <p class="inputtext">First name</p>
+            </input>
+            <input type="text" id ="lastname">
+            <p class="inputtext">Last name</p>
+            </input>
+            <br><button class="searchbutton" id="searchbutton">Search</button>
+            <div id="playerinfo">
+            </div>
+         </div>
+         <div align="center" class="showbox">
+            <p class="title" id="gametitle">Player's games</p>
+            <div id="gamehistory"></div>
+         </div>
+      </div>
+      </div>
+   </body>
+
+</html>

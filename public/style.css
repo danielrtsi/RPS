@@ -1,0 +1,99 @@
+p.game {
+  color: yellow;
+  font-family: arial;
+  font-size: 20px;
+}
+p.history1 {
+  color: black;
+  background-color: #E0E0E0;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+p.history2 {
+  color: black;
+  background-color: #C0C0C0;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+p.inputtext {
+  color: yellow;
+  font-family: arial;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 0px;
+}
+p.title {
+  font-size: 26px;
+  color: gold;
+  text-decoration: none;
+}
+p.info {
+  font-size:24px;
+  color: gold;
+}
+p.nonefound {
+  font-size: 24px;
+  color: red;
+}
+body {
+  background-color: black;
+}
+div.showbox {
+  border-style: solid;;
+  border-color: yellow;
+  border-radius: 10px;
+  border-width: 5px;
+  display: inline-block;
+  width: 400px;
+  height: 700px;
+  vertical-align: top;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+button.searchbutton {
+  background-color: gold;
+  height: 50px;
+  width: 100px;
+  font-family: arial;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+button.searchbutton:hover {
+  background-color: orange;
+}
+input {
+  margin-top: 5px;
+  height: 24px;
+  font-size: 20px;
+}
+span.red {
+  color: red;
+}
+span.green {
+  color: mediumseagreen;
+}
+span.blue {
+  color: blue;
+}
+span.info2 {
+  color: yellow;
+  font-size: 24px;
+}
+#wrapper {
+  text-align: center;
+}
+#gamehistory {
+  background-color: black;
+  width: 350px;
+  height: 600px;
+  overflow: auto;
+}
+#playerinfo {
+  width:350px;
+  height: 200px;
+  margin-top:20px;
+}
