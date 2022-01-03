@@ -1,4 +1,11 @@
 //import libraries and declare necessary constants and variables
+//Change these values
+const port = 8080; //Your port
+const ip = "127.0.0.1"; //Your ip
+const dburl = "mongodb://localhost:27017"; //Your Mongo address
+const collection = "games"; //Name of the collection you'd like to use
+const dbname = "rspgames"; //Name of the database you'd like to use
+
 const http = require("http");
 const https = require("https");
 const fs = require("fs");
@@ -6,11 +13,7 @@ const url = require("url");
 const mongo = require("mongodb").MongoClient;
 const socketclient = require("websocket").client;
 const client = new socketclient();
-const port = 8080;
-const ip = "127.0.0.1";
-const dburl = "mongodb://localhost:27017";
-const collection = "games";
-const dbname = "rspgames";
+
 
 var lastpage = "";
 var counter = 0;
@@ -101,7 +104,7 @@ function updateHistory(url) {
        counter++;
        console.log("Page " + counter);
        console.log("Cursor: " + obj.cursor);
-       
+
           for (let i = 0; i < rows.length; i++) {
               base.collection(collection).insertOne(rows[i], (error, resposnse) => {
                 //The program will try insert games that are already logged. In that case just do nothing.
