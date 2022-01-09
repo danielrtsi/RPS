@@ -109,14 +109,13 @@ function updateHistory(url) {
               base.collection(collection).insertOne(rows[i], (error, resposnse) => {
                 //The program will try insert games that are already logged. In that case just do nothing.
                 if (error) {
-                //  console.log(error);
                 }
               });
           }
           if (obj.cursor == null || obj.cursor == lastpage) {
-    //        database.close();
             return;
           }
+          
           if (counter == 3) {
            fs.writeFile("lastpage.txt", obj.cursor || "cursor was null", error => {
              if (error) console.log("Failed to write to lastpage: " + error);
@@ -125,10 +124,8 @@ function updateHistory(url) {
           //If cursor is null and for some reason it hasn't interrupted the logging,
           //it'll be set to empty string to prevent error and crash
           if (obj.cursor == null) obj.cursor = "";
-      //    database.close();
-          console.log("Not doing " + counter);
+
           updateHistory("https://bad-api-assignment.reaktor.com" + obj.cursor);
-      //  });
 
         return;
 });
